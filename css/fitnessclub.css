@@ -1,11 +1,52 @@
-body {
-	background-image: url(../images/bg_html.jpg);
+/*---CSS RESET---*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-image: url(../images/bg_html.jpg);
 	font-family: 'Source Sans Pro', sans-serif;
 }
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---wrap---*/
 .wrap {
 	width: 900px;
-	height: 1000px;
 	margin: 0 auto;
 }
 .decoration {
@@ -35,9 +76,13 @@ body {
 	background: #3B3B3B;
 	float: left;
 }
+
+
+/*---header---*/
 .header {
 	width: 900px;
-	height: 100px;
+	height: 81px;
+	margin: 20px 0 20px 0;
 	position: relative;
 }
 .dot ul li {
@@ -56,6 +101,7 @@ body {
 	width: 171px;
 	float: left;
 }
+/*---main-nav---*/
 .main-nav {
 	float: right;
 	font-weight: 600;
@@ -75,28 +121,26 @@ body {
 	display: inline;
 	padding: 10px 0 10px 50px;
 }
-ul {
-	list-style: none;
-}
+
+/*---clear---*/
 .clear {
 	clear: both;
 }
-.content {
-	padding-top: 20px;
-}
+/*---banner---*/
 .banner {
-	width: 620px;
 	float: left;
+	margin-bottom: 20px;
 }
 .info {
-	padding: 0 40px 0 40px;
+	padding: 40px 40px 0 40px;
 	float: left;
-	width: 200px;
-	height: 415px;
+	width: 180px;
+	height: 375px;
 	background: #272727;
 	position: relative;
 }
 .info h2 {
+	margin-bottom: 20px;
 	font-size: 45px;
 	font-weight: 400;
 	line-height: 42px;
@@ -127,8 +171,12 @@ ul {
 	background: #00B8E6;
 	color: #d0d0d0;
 }
+
+/*---intro---*/
 .intro {
 	background: #ffffff;
+	box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+	margin-bottom: 20px;
 }
 .intro p {
 	padding: 30px 40px 30px 40px;
@@ -140,63 +188,87 @@ ul {
 	color: #00B8E6;
 	text-decoration: none;
 }
-/*-----------------------------------*/
+
+/*---events---*/
 .events {
-	background: #ffffff;
-	height: 460px;
-}
-.latest {
-	width: 550px;
+	width: 820px;
 	height: 400px;
-	padding: 30px 0 30px 40px;
-	float: left;
+	background: #ffffff;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+	position: relative;
 }
-.subtitle h3 {
-	margin: 0;
+.events h3 {
 	font-size: 28px;
 	font-weight: 400;
+	margin-bottom: 30px;
 }
-.subtitle strong {
+.events strong {
 	font-weight: normal;
 	color: #00B8E6;
 }
+/*---box---*/
 .box {
+	width: 520px;
 	float: left;
-	height: 182px;
+	margin-right: 40px
 }
-.pic {
-	float: left;
-	margin-top: 21px;
+.box span {
+	font-weight: 600;
 }
 .box-info {
-	width: 345px;
+	width: 520px;
+}
+.box-info a {
+	text-decoration: none;
+	color: #000;
+}
+.box-info ul li {
+	display: inline-block;
+	margin-top: 20px;
+}
+.box-info li img {
+	display: inline-block;
+	width: 32%;
+	margin-top: 13px;
+	margin-right: 3%;
 	float: left;
-	padding-left: 20px;
-	line-height: 30px;
 }
-.box-inf {
+.box-info h4 {
+	font-weight: 600;
+}
+.text {
+	width: 65%;
+	font-size: 16px;
 	font-weight: 400;
+	line-height: 30px;
+	float: left;
 }
+
+/*---service---*/
 .service {
-	width: 230px;
-	height: 400px;
-	padding: 30px 40px 30px 40px;
 	float: left;
 }
 .list {
-	height: 182px;
+	margin-bottom: 20px;
 }
 .list img {
 	margin-right: 5px;
 }
-.list ul {
-	padding-left: 0px;
-	margin
-}
-.list ul li a{
-	text-decoration: none;
+.list a{
 	color: #000;
+	text-decoration: none;
+	font-size: 16px;
 	line-height: 30px;
+}
+.list a:hover {
+	color: pink;
+}
+.find {
+	position: relative;
 }
 .bar {
 	display: block;
@@ -205,10 +277,10 @@ ul {
 	padding-left: 20px;
 	font-size: 16px;
 	font-weight: 300;
-	margin-top: 16px;
 	border-width: 0;
 }
 .search {
+	display: block;
 	padding: 12.5px 30px 12.5px 30px;
 	border-width: 0;
 	background: #F0F0F0;
@@ -219,7 +291,7 @@ input[type="submit"]:hover {
 	background: #00B8E6;
 	color: #F0F0F0;
 }
-/*-----------------------------------*/
+/*---footer---*/
 .footer p {
 	padding: 30px 40px 30px 40px;
 	font-size: 16px;
@@ -230,4 +302,112 @@ input[type="submit"]:hover {
 .footer p a {
 	color: #00B8E6;
 	text-decoration: none;
+}
+
+/*---RWD---*/
+@media only screen and (max-width: 768px) {
+	.wrap {
+		width: 100%;
+		margin:0px 0 0 0;
+	}
+	.decoration1 {
+		width: 10%;
+	}
+	.decoration2 {
+		width: 10%;
+	}
+	.decoration3 {
+		width: 10%;
+	}
+	.decoration4 {
+		width: 70%;
+	}
+	.header {
+		width: 100%;
+		height: auto;
+	}
+	.logo a{
+		float: none;
+		margin-left: 5%;
+	}
+	.dot {
+		display: none;
+	}
+	.main-nav {
+		float: none;
+		position: relative;
+		padding-top: 20px;
+		text-align: center;
+	}
+	.main-nav a {
+		font-size: 18px;
+	}
+	.main-nav ul li {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	/*banner*/
+	.banner {
+		float: none;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.banner img {
+		max-width: 94%;
+		height: auto;
+	}
+	/*info*/
+	.info {
+		text-align: center;
+		float: none;
+		width: 94%;
+		height: auto;
+		margin: -2px 3% 10px 3%;
+		padding: 20px 0 20px 0;
+	}
+	.info p {
+		display: none;
+	}
+	.info a {
+		position: static;
+		margin: 0 auto;
+	}
+	/*intro*/
+	.intro {
+		margin: 0 3% 10px 3%;
+	}
+	.intro p {
+		padding: 3% 4% 3% 4%;
+		font-size: 16px;
+	}
+	.events {
+		width: 100%;
+		height: auto;
+		margin: 0;
+		padding: 0;
+	}
+	.box {
+		width: 94%;
+		background-color: #ffffff;
+		margin: 0 3% 0 3%;
+		box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+	}
+	.box h3 {
+		padding-top: 20px;
+		margin-bottom: 3%;
+		text-align: center;
+	}
+	.box-info {
+		width: 100%;
+		padding-bottom: 20px;
+	}
+	.box-info li a {
+		display: block;
+		width: 94%;
+		padding: 0 3% 0 3%;
+	}
+	.service {
+		display: none;
+	}
 }

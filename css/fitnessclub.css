@@ -305,6 +305,7 @@ input[type="submit"]:hover {
 }
 
 /*---RWD---*/
+/*768_max_width*/
 @media only screen and (max-width: 768px) {
 	.wrap {
 		width: 100%;
@@ -361,13 +362,13 @@ input[type="submit"]:hover {
 	.info {
 		text-align: center;
 		float: none;
-		width: 94%;
+		width: inherit;
 		height: auto;
 		margin: -2px 3% 10px 3%;
 		padding: 20px 0 20px 0;
 	}
 	.info p {
-		display: none;
+		padding: 0 15% 5% 15%;
 	}
 	.info a {
 		position: static;
@@ -407,7 +408,53 @@ input[type="submit"]:hover {
 		width: 94%;
 		padding: 0 3% 0 3%;
 	}
+	.text {
+		padding-top: 3%;
+	}
 	.service {
 		display: none;
+	}
+}
+/*375_max_width*/
+@media only screen and (max-width: 375px) {
+	.main-nav ul li a {
+		display: block;
+		width: 50%;
+		height: auto;
+		margin: 0 auto;
+	}
+	.banner img {
+		display: none;
+	}
+	.info p {
+		display: none;
+	}
+	.intro {
+		display: none;
+	}
+	.box h3 {
+		padding-top: 5%;
+	}
+	.box-info {
+		margin: 0 auto;
+	}
+	.box-info p{
+		display: none;
+	}
+	.box-info li img{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		text-align: center;
+		float: none;
+	}
+	.text {
+		float: none;
+		text-align: center;
+		margin: 0 auto;
+		padding: 0 auto;
+	}
+	.text h4 {
+		font-size: 20px;
 	}
 }
